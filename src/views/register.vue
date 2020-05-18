@@ -31,6 +31,7 @@
 </template>
 
 <script>
+// 引入组件LoginTop,LoginText,LoginBtn
 import LoginTop from '@/components/common/LoginTop.vue'
 import LoginText from '@/components/common/LoginText.vue'
 import LoginBtn from '@/components/common/LoginBtn.vue'
