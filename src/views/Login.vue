@@ -1,6 +1,7 @@
 <template>
   <div>
       <login-top Text="登录bilibili">
+          <!-- 跳转路径 slot插槽 -->
             <div slot="right" style="font-size:3.611vw" @click="$router.push('/register')">用户注册</div>
       </login-top>
 
@@ -40,6 +41,7 @@ export default {
         LoginBtn
     },
     methods:{
+        // 登陆请求
         async AjaxInsert() {
             if(this.model.username&&this.model.password){
                 const res =  await this.$http.post('/login',this.model)
