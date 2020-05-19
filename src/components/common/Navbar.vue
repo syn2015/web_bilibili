@@ -4,6 +4,7 @@
           <img src="@/assets/logo.png" alt="" @click="$router.push('/')">
       </div>
       <div>
+          <!-- van-icon 图标 -->
           <div> <van-icon name="search" class="iconNav"/></div>
       </div>
       <div>
@@ -35,6 +36,7 @@ export default {
     height: 13.056vw;
     display: flex;
     background-color: white;
+    // logo图
     div:nth-child(1){
         width: 25vw;
         display: flex;
@@ -44,6 +46,7 @@ export default {
             width:100%;
         }
     }
+    // input框，需要跳转
     div:nth-child(2){
         flex: 1;
         display: flex;
@@ -56,6 +59,7 @@ export default {
             width: 100%;
             border-radius: 3.333vw;
               position: relative;
+            //  取消vant-icon的默认样式
               .iconNav{
                   color: #aaa;
                   position: absolute;
@@ -65,6 +69,7 @@ export default {
             }
      }
     }
+    // 个人头像和app
     div:nth-child(3){
         display: flex;
         justify-content: center;
@@ -80,6 +85,7 @@ export default {
             color: white;
             
         }
+        // 头像
         img{
             width: 6.944vw;
             height: 6.944vw;
