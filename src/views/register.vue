@@ -25,7 +25,7 @@
             @contentWatch="res => model.password = res"
         >
         </login-text>
-
+        <!-- 传递子组件方法 -->
         <login-btn BtnText="注册" @TextClick="AjaxInsert"></login-btn>
   </div>
 </template>
@@ -47,9 +47,13 @@ export default {
         LoginBtn
     },
     methods:{
+        // 点击注册
+        // es7语法
         async AjaxInsert() {
             if(this.model.name && this.model.username&&this.model.password){
+                // 发送请求
                 const res =  await this.$http.post('/register',this.model)
+                // vant的消息提示
                 this.$msg.fail(res.data.msg)
                 localStorage.setItem('token',res.data.objtoken) 
                 localStorage.setItem('id',res.data.id) 
